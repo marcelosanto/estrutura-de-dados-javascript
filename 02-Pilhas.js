@@ -40,12 +40,32 @@ function Stack(params) {
 }
 
 const pilha = new Stack()
-pilha.push('Marcelo')
-pilha.push('Gabriel')
-pilha.push('Magdalena')
-pilha.push('Ezequias')
-pilha.push('Alice')
 
-console.log(`Elemento do topo da pilha: ${pilha.peek()}`)
+console.log(pilha.isempty())
 
-console.log(`Tamanho da pilha: ${pilha.size()}`)
+pilha.push('5')
+pilha.print()
+
+pilha.push('8')
+pilha.print()
+
+pilha.push('11')
+pilha.print()
+
+pilha.push('15')
+pilha.print()
+
+console.log(`Removendo o topo da pilha`)
+pilha.pop()
+pilha.print()
+
+pilha.pop()
+pilha.print()
+
+pilha.pop()
+pilha.print()
+
+pilha.pop()
+pilha.print()
+
+console.log(pilha.isempty())
