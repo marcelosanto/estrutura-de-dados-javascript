@@ -39,33 +39,54 @@ function Stack(params) {
   }
 }
 
-const pilha = new Stack()
+// const pilha = new Stack()
 
-console.log(pilha.isempty())
+// console.log(pilha.isempty())
 
-pilha.push('5')
-pilha.print()
+// pilha.push('5')
+// pilha.print()
 
-pilha.push('8')
-pilha.print()
+// pilha.push('8')
+// pilha.print()
 
-pilha.push('11')
-pilha.print()
+// pilha.push('11')
+// pilha.print()
 
-pilha.push('15')
-pilha.print()
+// pilha.push('15')
+// pilha.print()
 
-console.log(`Removendo o topo da pilha`)
-pilha.pop()
-pilha.print()
+// console.log(`Removendo o topo da pilha`)
+// pilha.pop()
+// pilha.print()
 
-pilha.pop()
-pilha.print()
+// pilha.pop()
+// pilha.print()
 
-pilha.pop()
-pilha.print()
+// pilha.pop()
+// pilha.print()
 
-pilha.pop()
-pilha.print()
+// pilha.pop()
+// pilha.print()
 
-console.log(pilha.isempty())
+// console.log(pilha.isempty())
+
+//Conversor de decimal pra binario usando pilha
+function dec2Bin(decNumber) {
+  const restStack = []
+  let rest,
+    binaryString = ''
+
+  while (decNumber > 0) {
+    rest = Math.floor(decNumber % 2)
+    restStack.push(rest)
+    decNumber = Math.floor(decNumber / 2)
+  }
+
+  while (restStack.length > 0) {
+    binaryString += restStack.pop().toString()
+  }
+
+  return binaryString
+}
+
+console.log(dec2Bin(23))
